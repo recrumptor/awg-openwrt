@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         build_env:
-          - tag: "23.05-SNAPSHOT"
+          - tag: "23.05"
             pkgarch: mipsel_24kc
             target: ramips
             subtarget: mt7621
@@ -31,7 +31,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: openwrt/openwrt
+          repository: 0x4C334E3438/openwrt
           ref: v${{ matrix.build_env.tag }}
           fetch-depth: 0
 
