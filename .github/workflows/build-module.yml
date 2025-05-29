@@ -32,7 +32,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: 0x4C334E3438/openwrt
-          ref: v${{ matrix.build_env.tag }}
+          ref: ${{ matrix.build_env.tag }}
           fetch-depth: 0
 
       - name: Cache Tools and Kernel
