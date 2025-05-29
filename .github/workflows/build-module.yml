@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         build_env:
-          - tag: "23.05"
+          - tag: "openwrt-23.05"
             pkgarch: mipsel_24kc
             target: ramips
             subtarget: mt7621
