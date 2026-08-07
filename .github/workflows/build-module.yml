@@ -140,8 +140,7 @@ jobs:
           
           cd "$SDK_DIR"
           
-          # Удаляем битую запись luci, если она есть, и обновляем фиды
-          sed -i 's/.*luci.git.*/src-git luci https:\/\/git.openwrt.org\/project\/luci.git;openwrt-${{ matrix.build_env.tag }}/g' feeds.conf.default || true
+          
           ./scripts/feeds update -a || true
           ./scripts/feeds install -a
           
